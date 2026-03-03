@@ -1,0 +1,46 @@
+resources:
+  - ccs-cluster.yaml
+  - ccs.yaml
+  # - cognos-analytics-cluster.yaml
+  # - cognos-analytics.yaml
+  - datarefinery-cluster.yaml
+  - datarefinery.yaml
+  - db2aaservice-cluster.yaml
+  - db2aaservice.yaml
+  - db2u-cluster.yaml
+  - db2u.yaml
+  - opencontent-rabbitmq-cluster.yaml
+  - opencontent-rabbitmq.yaml
+  - openpages-cluster.yaml
+  - openpages.yaml
+  - opensearch-cluster.yaml
+  - opensearch.yaml
+  - redis-cp-cluster.yaml
+  - redis-cp.yaml
+  - watsonx-ai-cluster.yaml
+  - watsonx-ai-ifm-cluster.yaml
+  - watsonx-ai-ifm.yaml
+  - watsonx-ai.yaml
+  # - watsonx-orchestrate-cluster.yaml
+  # - watsonx-orchestrate.yaml
+  - wml-cluster.yaml
+  - wml.yaml
+  - ws-cluster.yaml
+  - ws-runtimes-cluster.yaml
+  - ws-runtimes.yaml
+  - ws.yaml
+  # - ibm-events-operator.yaml
+  - data-governor-app.yaml
+  - data-governor-cluster-app.yaml
+  - ibm-namespace-scope-operator-app.yaml
+  - ibm-namespace-scope-operator-cluster-app.yaml
+  - ibm-usage-metering-app.yaml
+  - ibm-usage-metering-cluster-app.yaml
+  - watson-assistant-app.yaml
+  - watson-assistant-cluster-app.yaml
+  - watson-gateway-app.yaml
+  - watson-gateway-cluster-app.yaml
+  - watsonx-data-app.yaml
+  - watsonx-data-cluster-app.yaml
+  # - watsonx-orchestrate-app.yaml
+  # - watsonx-orchestrate-cluster-app.yaml

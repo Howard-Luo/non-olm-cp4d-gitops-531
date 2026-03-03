@@ -1,0 +1,3 @@
+resources:
+  - CatalogSource.yaml
+  - Subscription.yaml

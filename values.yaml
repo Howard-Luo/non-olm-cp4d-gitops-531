@@ -1,0 +1,145 @@
+global:
+  
+  argoSourceRepoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-530.git
+
+  operatorNS: gitops-operator
+  instanceNS: gitops-instance
+  licensingNS: ibm-licensing
+  appSuffix: gitops
+  fileStorageClass: ocs-external-storagecluster-cephfs
+  blockStorageClass: ocs-external-storagecluster-ceph-rbd
+  imagePullPrefix: icr.io
+  imagePullSecret: ibm-entitlement-key
+  argocdNS: openshift-gitops
+  helmRepoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+  installConfigImageDigest: "sha256:9ac23ce4fcbd57be90855cfffb2e437ab9f88e4ef3fac33f049fcb08ca970885"
+
+  cpd-platform-cluster:
+    chart: cpd-platform-cluster-scoped
+    version: 5.3.0+20251122.143747.124
+  cs-cluster:
+    chart: ibm-common-service-operator-cluster-scoped
+    version: 4.16.0+20251107.123839.0
+  im-cluster:
+    chart: ibm-iam-operator-cluster-scoped
+    version: 4.15.0+20251111.110850.0
+  postgresql-cluster:
+    chart: postgresql-cluster-scoped
+    version: 5.30.0+20251030.094351.108
+  zen-cluster:
+    chart: zen-cluster-scoped
+    version: 6.3.0+20251122.162557.333
+  ibm-licensing-cluster:
+    chart: ibm-license-service-cluster-scoped
+    version: 4.2.16+20250528.101036.0
+  ibm-licensing:
+    chart: ibm-license-service
+    version: 4.2.16+20250528.101036.0
+
+
+  cs:
+    chart: ibm-common-service-operator
+    version: 4.16.0+20251107.123839.0
+  im:
+    chart: ibm-iam-operator
+    version: 4.15.0+20251111.110850.0
+  postgresql:
+    chart: postgresql
+    version: 5.30.0+20251030.094351.108
+  zen:
+    chart: zen
+    version: 6.3.0+20251120.181620.331
+  cpd-platform:
+    chart: cpd-platform
+    version: 5.3.0+20251122.143747.124
+
+
+  ccs:
+    chart: ccs
+    version: 12.0.0+20251122.012657.332
+  ccs-cluster:
+    chart: ccs-cluster-scoped
+    version: 12.0.0+20251122.012657.332
+
+  datarefinery:
+    chart: datarefinery
+    version: 12.0.0+20251120.211953.156
+  datarefinery-cluster:
+    chart: datarefinery-cluster-scoped
+    version: 12.0.0+20251120.211953.156
+
+  opensearch:
+    chart: opencontent-opensearch
+    version: 1.1.4009+20250905.120936
+  opensearch-cluster:
+    chart: opencontent-opensearch-cluster-scoped
+    version: 1.1.4009+20250905.120936
+
+  watsonx-ai:
+    chart: watsonx-ai
+    version: 12.0.0+20251121.170045.60
+  watsonx-ai-cluster:
+    chart: watsonx-ai-cluster-scoped
+    version: 12.0.0+20251121.170045.60
+
+  watsonx-ai-ifm:
+    chart: watsonx-ai-ifm
+    version: 12.0.0+20251128.202845.243
+  watsonx-ai-ifm-cluster:
+    chart: watsonx-ai-ifm-cluster-scoped
+    version: 12.0.0+20251126.133633.241
+
+  wml:
+    chart: wml
+    version: 12.0.0+20251124.092058.329
+  wml-cluster:
+    chart: wml-cluster-scoped
+    version: 12.0.0+20251124.092058.329
+
+  ws:
+    chart: ws
+    version: 12.0.0+20251121.170036.55
+  ws-cluster:
+    chart: ws-cluster-scoped
+    version: 12.0.0+20251121.170036.55
+
+  ws-runtimes:
+    chart: ws-runtimes
+    version: 12.0.0+20251120.153644.24
+  ws-runtimes-cluster:
+    chart: ws-runtimes-cluster-scoped
+    version: 12.0.0+20251120.153644.24
+
+  cognos-analytics:
+    chart: cognos-analytics
+    version: 29.0.0+20251128.190941.10407
+  cognos-analytics-cluster:
+    chart: cognos-analytics-cluster-scoped
+    version: 29.0.0+20251128.190941.10407
+  db2aaservice:
+    chart: db2aaservice
+    version: 5.3.0+20251127.152913.3557.4851
+  db2aaservice-cluster:
+    chart: db2aaservice-cluster-scoped
+    version: 5.3.0+20251127.152913.3557.4851
+  db2u:
+    chart: db2u
+    version: 7.5.0+20251202.114927.18415
+  db2u-cluster:
+    chart: db2u-cluster-scoped
+    version: 7.5.0+20251202.114927.18415
+  opencontent-rabbitmq:
+    chart: opencontent-rabbitmq
+    version: 1.0.57+20250909.172851
+  opencontent-rabbitmq-cluster:
+    chart: opencontent-rabbitmq-cluster-scoped
+    version: 1.0.57+20250909.172851
+  openpages:
+    chart: openpages
+    version: 10.0.0+20251125.115349.912112433
+  openpages-cluster:
+    chart: openpages-cluster-scoped
+    version: 10.0.0+20251125.115349.912112433
+
+## "Repository": "cp.icr.io/cp/cpd/olm-utils-premium-v4"
+## sha256:9ac23ce4fcbd57be90855cfffb2e437ab9f88e4ef3fac33f049fcb08ca970885

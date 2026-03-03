@@ -1,0 +1,4 @@
+resources:
+  - NS.yaml
+  - OperatorGroup.yaml
+  - Subscription.yaml

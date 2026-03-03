@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cpd-datarefinery-gitops
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-530.git
+    targetRevision: main
+    path: repos/cpd-datarefinery
+    helm:
+      valueFiles:
+        - ../../values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

@@ -1,0 +1,6 @@
+resources:
+  - DataScienceCluster.yaml
+  - DSCInitialization.yaml
+  - NS.yaml
+  - OperatorGroup.yaml
+  - Subscription.yaml

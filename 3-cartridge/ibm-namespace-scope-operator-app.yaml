@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+labels:
+  component-id: cpfs
+metadata:
+  name: ibm-namespace-scope-operator-gitops
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    chart: ibm-namespace-scope-operator
+    helm:
+      valuesObject:
+        global:
+          blockStorageClass: ocs-external-storagecluster-ceph-rbd
+          fileStorageClass: ocs-external-storagecluster-cephfs
+          installConfigImageDigest: sha256:9ac23ce4fcbd57be90855cfffb2e437ab9f88e4ef3fac33f049fcb08ca970885
+          installConfigImageName: cp/cpd/olm-utils-premium-v4
+          installConfigImagePullPrefix: cp.icr.io
+          instanceNamespace: gitops-instance
+          licenseAccept: true
+          operatorNamespace: gitops-operator
+          releaseVersion: 5.3.0
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 4.3.3+20251124.110817.0

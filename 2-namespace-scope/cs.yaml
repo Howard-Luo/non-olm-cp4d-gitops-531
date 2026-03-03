@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cs-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: namespace
+    product: software-hub
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 4.17.0+20260211.152150.0
+    chart: ibm-common-service-operator
+    helm:
+      valuesObject:
+        global:
+          licenseAccept: true
+          releaseVersion: 5.3.1
+          operatorNamespace: gitops-operator
+          instanceNamespace: gitops-instance
+          blockStorageClass: ocs-external-storagecluster-ceph-rbd
+          fileStorageClass: ocs-external-storagecluster-cephfs
+          imagePullPrefix: icr.io
+          imagePullSecret: ibm-entitlement-key
+          scaleConfig: "small"
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

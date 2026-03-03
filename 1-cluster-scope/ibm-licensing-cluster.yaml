@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ibm-licensing-cluster-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: cluster
+    product: software-hub
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 4.2.20+20260210.110820.0
+    chart: ibm-licensing-cluster-scoped
+    helm:
+      valuesObject:
+        global:
+          licenseAccept: true
+          imagePullPrefix: icr.io
+          imagePullSecret: ibm-entitlement-key
+        # ibmLicensing:
+        #   namespace: ibm-licensing
+        #   watchNamespace: ibm-licensing,gitops-operator,gitops-instance
+        ibmLicensing:
+          namespace: gitops-instance
+          watchNamespace: gitops-operator,gitops-instance
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

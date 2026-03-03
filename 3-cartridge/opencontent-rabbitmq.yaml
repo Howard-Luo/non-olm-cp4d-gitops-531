@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opencontent-rabbitmq-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: namespace
+    product: software-hub
+spec:
+  ignoreDifferences:
+    - kind: "*"
+      group: "*"
+      jsonPointers:
+        - /metadata/annotations
+        - /metadata/labels
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 1.0.57+20250909.172851
+    chart: opencontent-rabbitmq
+    helm:
+      valuesObject:
+        global:
+          licenseAccept: true
+          operatorNamespace: gitops-operator
+          instanceNamespace: gitops-instance
+          blockStorageClass: ocs-external-storagecluster-ceph-rbd
+          fileStorageClass: ocs-external-storagecluster-cephfs
+          imagePullPrefix: icr.io
+          imagePullSecret: ibm-entitlement-key
+        opencontent-rabbitmq:
+          deployCR: true
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: db2u-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: namespace
+    product: openpages
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-530.git
+    targetRevision: main
+    path: repos/db2u
+    helm:
+      valueFiles:
+        - ../../values.yaml
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

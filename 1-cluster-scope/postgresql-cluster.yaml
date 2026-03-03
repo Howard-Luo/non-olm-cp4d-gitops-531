@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgresql-cluster-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: cluster
+    product: software-hub
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 5.31.0+20260129.153527.226
+    chart: postgresql-cluster-scoped
+    helm:
+      valuesObject:
+        global:
+          operatorNamespace: gitops-operator
+        ## patching when ccs is enabled
+        # webhook:
+        #   mutating:
+        #     create: false
+        #   validating:
+        #     create: false
+  project: default

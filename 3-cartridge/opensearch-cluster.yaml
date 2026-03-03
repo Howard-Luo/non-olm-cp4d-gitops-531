@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opensearch-cluster-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: cluster
+    product: software-hub
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 1.1.4009+20250905.120936
+    chart: opencontent-opensearch-cluster-scoped
+    helm:
+      valuesObject:
+        global:
+          operatorNamespace: gitops-operator
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

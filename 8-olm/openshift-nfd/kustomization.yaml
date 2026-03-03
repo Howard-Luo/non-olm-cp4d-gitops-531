@@ -1,0 +1,5 @@
+resources:
+  - NS.yaml
+  - OperatorGroup.yaml
+  - Subscription.yaml
+  - NodeFeatureDiscovery.yaml

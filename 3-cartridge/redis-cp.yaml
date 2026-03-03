@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redis-cp-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: namespace
+    product: software-hub
+spec:
+  ignoreDifferences:
+    - kind: "*"
+      group: "*"
+      jsonPointers:
+        - /metadata/annotations
+        - /metadata/labels
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 1.3.0+20251030.042031.105
+    chart: ibm-redis-cp
+    helm:
+      valuesObject:
+        global:
+          licenseAccept: true
+          operatorNamespace: gitops-operator
+          instanceNamespace: gitops-instance
+          blockStorageClass: ocs-external-storagecluster-ceph-rbd
+          fileStorageClass: ocs-external-storagecluster-cephfs
+          imagePullPrefix: icr.io
+          imagePullSecret: ibm-entitlement-key
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

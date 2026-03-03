@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: opencontent-rabbitmq-cluster-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: cluster
+    product: software-hub
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 1.0.57+20250909.172851
+    chart: opencontent-rabbitmq-cluster-scoped
+    helm:
+      valuesObject:
+        global:
+          operatorNamespace: gitops-operator
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true

@@ -1,0 +1,10 @@
+resources:
+  - 1-cluster-scope
+  - 2-namespace-scope
+  # - 3-cartridge
+  ## Cartridges to be enable/disable
+  # - 3-cartridge/planning-analytics
+  # - 3-cartridge/openpages
+  # - 3-cartridge/cognos-analytics
+  ## Please make sure you have done the prerequisite for watsonx.ai https://www.ibm.com/docs/en/software-hub/5.3.x?topic=cluster-installing-prerequisite-software
+  # - 3-cartridge/watsonx-ai

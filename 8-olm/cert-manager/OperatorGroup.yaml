@@ -1,0 +1,9 @@
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: gitops-operator-watched-namespaces
+  namespace: gitops-operator
+spec:
+  targetNamespaces:
+  - gitops-operator
+  - gitops-instance

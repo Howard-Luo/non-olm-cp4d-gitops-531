@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitops-operator
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gitops-instance
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ibm-licensing

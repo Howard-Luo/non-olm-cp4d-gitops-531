@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: ibm-events-operator
+  namespace: gitops-operator
+spec:
+  channel: v5.2
+  installPlanApproval: Automatic
+  name: ibm-events-operator
+  source: ibm-events-operator-catalog
+  sourceNamespace: gitops-operator

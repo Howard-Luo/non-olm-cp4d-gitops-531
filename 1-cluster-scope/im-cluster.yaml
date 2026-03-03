@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: im-cluster-gitops
+  namespace: openshift-gitops
+  labels:
+    scope: cluster
+    product: software-hub
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    targetRevision: 4.16.0+20260210.110820.0
+    chart: ibm-iam-operator-cluster-scoped
+    helm:
+      valuesObject:
+        global:
+          operatorNamespace: gitops-operator
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
