@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-530.git
+    repoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-531.git
     targetRevision: main
     path: .
     kustomize: {}

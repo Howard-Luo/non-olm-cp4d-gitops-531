@@ -1,6 +1,6 @@
 global:
   
-  argoSourceRepoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-530.git
+  argoSourceRepoURL: https://github.com/Howard-Luo/non-olm-cp4d-gitops-531.git
 
   operatorNS: gitops-operator
   instanceNS: gitops-instance
@@ -11,7 +11,7 @@ global:
   imagePullPrefix: icr.io
   imagePullSecret: ibm-entitlement-key
   argocdNS: openshift-gitops
-  helmRepoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+  helmRepoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
   installConfigImageDigest: "sha256:9ac23ce4fcbd57be90855cfffb2e437ab9f88e4ef3fac33f049fcb08ca970885"
 
   cpd-platform-cluster:

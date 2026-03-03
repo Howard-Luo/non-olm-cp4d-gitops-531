@@ -19,7 +19,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: ''
-    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
     targetRevision: 12.0.0+20251208.165327.26
     chart: ws-runtimes
     helm:

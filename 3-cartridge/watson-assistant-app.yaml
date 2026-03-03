@@ -28,5 +28,5 @@ spec:
         watsonAssistant:
           deployCR: false    
     path: ''
-    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
     targetRevision: 5.10.0+20260108.180631.2583

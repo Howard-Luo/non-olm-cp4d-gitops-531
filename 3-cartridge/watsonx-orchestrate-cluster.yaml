@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: ''
-    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-530/repos
+    repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
     targetRevision: 7.0.0+20251209.173944.10066
     chart: watsonx-orchestrate-cluster-scoped
     helm:
