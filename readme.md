@@ -4,7 +4,7 @@ This project implements automated GitOps installation and management for IBM Clo
 
 ## Features
 - Automated the Non-OLM installation method for CP4D/Software Hub and Cartrigdes managed by ArgoCD for continuous integration and delivery. 
-- Developed based on [IBMSoftwareHub/charts/tree/5.3.0](https://github.ibm.com/IBMSoftwareHub/charts/tree/5.3.0) and restructure as layers (cluster scoped, namespace scoped, cartridge) for clean management.
+- Developed based on [IBMSoftwareHub/charts/tree/5.3.1](https://github.ibm.com/IBMSoftwareHub/charts/tree/5.3.1) and restructure as layers (cluster scoped, namespace scoped, cartridge) for clean management.
 - Pluggable enable/disable for any cartridge.
 - Parameterisation and automatic variable substitution, making it easy to adapt to different environments and team collaboration
 
@@ -19,7 +19,7 @@ This project implements automated GitOps installation and management for IBM Clo
 |cert-manager-operator (for Red Hat OpenShift)|1.17.0|Software Hub|
 |ibm-rabbitmq-operator|1.0.50|OpenPages|
 |ibm-db2uoperator|7.3.0|OpenPages|
-|ibm-db2aaservice|5.3.0|OpenPages|
+|ibm-db2aaservice|5.3.1|OpenPages|
 |ibm-ccs|11.0.0|Cognos Analytics, watsonx.ai|
 |ibm-opensearch-operator|1.1.2494|Cognos Analytics, watsonx.ai|
 |ibm-datarefinery|11.0.0|watsonx.ai|

@@ -20,7 +20,7 @@ spec:
   source:
     path: ''
     repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
-    targetRevision: 1.0.57+20250909.172851
+    targetRevision: 1.3.0+20250909.172851
     chart: opencontent-rabbitmq
     helm:
       valuesObject:

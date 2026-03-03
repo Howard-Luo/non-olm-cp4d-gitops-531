@@ -22,7 +22,7 @@ spec:
           licenseAccept: true
           operatorNamespace: gitops-operator
           instanceNamespace: gitops-instance
-          releaseVersion: 5.3.0
+          releaseVersion: 5.3.1
           tetheredNamespaces: []
           blockStorageClass: ocs-external-storagecluster-ceph-rbd
           fileStorageClass: ocs-external-storagecluster-cephfs
@@ -33,7 +33,7 @@ spec:
           installConfigImagePullPrefix: cp.icr.io
         planning_analytics:
           non_olm: true
-          crVersion: 5.3.0
+          crVersion: 5.3.1
           imagePullSubDir: "cp/cpd"
           operatorImageName: cpopen/ibm-planning-analytics-operator
           operatorImageDigest:

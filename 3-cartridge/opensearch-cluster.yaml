@@ -14,7 +14,7 @@ spec:
   source:
     path: ''
     repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
-    targetRevision: 1.1.4009+20250905.120936
+    targetRevision: 1.2.0+20250905.120936
     chart: opencontent-opensearch-cluster-scoped
     helm:
       valuesObject:

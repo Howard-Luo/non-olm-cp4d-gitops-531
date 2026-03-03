@@ -22,7 +22,7 @@ spec:
           licenseAccept: true
           operatorNamespace: gitops-operator
           instanceNamespace: gitops-instance
-          releaseVersion: 5.3.0
+          releaseVersion: 5.3.1
           tetheredNamespaces: []
           blockStorageClass: ocs-external-storagecluster-ceph-rbd
           fileStorageClass: ocs-external-storagecluster-cephfs

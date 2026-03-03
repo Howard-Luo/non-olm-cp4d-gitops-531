@@ -24,7 +24,7 @@ spec:
           instanceNamespace: gitops-instance
           licenseAccept: true
           operatorNamespace: gitops-operator
-          releaseVersion: 5.3.0
+          releaseVersion: 5.3.1
     path: ''
     repoURL: https://howard-luo.github.io/non-olm-cp4d-gitops-531/repos
-    targetRevision: 2.0.63+20250905.144313
+    targetRevision: 2.2.0+20250905.144313

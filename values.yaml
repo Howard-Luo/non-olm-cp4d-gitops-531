@@ -16,7 +16,7 @@ global:
 
   cpd-platform-cluster:
     chart: cpd-platform-cluster-scoped
-    version: 5.3.0+20251122.143747.124
+    version: 5.3.1+20251122.143747.124
   cs-cluster:
     chart: ibm-common-service-operator-cluster-scoped
     version: 4.16.0+20251107.123839.0
@@ -51,7 +51,7 @@ global:
     version: 6.3.0+20251120.181620.331
   cpd-platform:
     chart: cpd-platform
-    version: 5.3.0+20251122.143747.124
+    version: 5.3.1+20251122.143747.124
 
 
   ccs:
@@ -118,10 +118,10 @@ global:
     version: 29.0.0+20251128.190941.10407
   db2aaservice:
     chart: db2aaservice
-    version: 5.3.0+20251127.152913.3557.4851
+    version: 5.3.1+20251127.152913.3557.4851
   db2aaservice-cluster:
     chart: db2aaservice-cluster-scoped
-    version: 5.3.0+20251127.152913.3557.4851
+    version: 5.3.1+20251127.152913.3557.4851
   db2u:
     chart: db2u
     version: 7.5.0+20251202.114927.18415
