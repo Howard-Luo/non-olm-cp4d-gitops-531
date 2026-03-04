@@ -15,7 +15,7 @@ spec:
         - /metadata/labels
   destination:
     name: ''
-    namespace: [gitops-instance] ## this chart will deployed on instance namespace
+    namespace: gitops-instance ## this chart will deployed on instance namespace
     server: https://kubernetes.default.svc
   source:
     path: ''
@@ -24,7 +24,7 @@ spec:
     chart: ibm-events-operator
     helm:
       valuesObject:
-        watchNamespaces: gitops-instance
+        watchNamespaces: [gitops-instance]
         # watchNamespaces: [gitops-operator,gitops-instance]
         # watchAnyNamespace: true
         # kafka:
