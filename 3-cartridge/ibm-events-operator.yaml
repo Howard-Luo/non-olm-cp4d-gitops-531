@@ -15,7 +15,7 @@ spec:
         - /metadata/labels
   destination:
     name: ''
-    namespace: gitops-instance ## this chart will deployed on instance namespace
+    namespace: [gitops-instance] ## this chart will deployed on instance namespace
     server: https://kubernetes.default.svc
   source:
     path: ''
