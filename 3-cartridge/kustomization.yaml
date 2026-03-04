@@ -27,7 +27,7 @@ resources:
   - ws-runtimes-cluster.yaml
   - ws-runtimes.yaml
   - ws.yaml
-  # - ibm-events-operator.yaml
+  - ibm-events-operator.yaml
   - data-governor-app.yaml
   - data-governor-cluster-app.yaml
   - ibm-namespace-scope-operator-app.yaml
@@ -42,3 +42,4 @@ resources:
   - watsonx-data-cluster-app.yaml
   # - watsonx-orchestrate-app.yaml
   # - watsonx-orchestrate-cluster-app.yaml
+  - instances
