@@ -32,12 +32,12 @@ spec:
         kafka:
           image:
             name: "kafka:latest-kafka-4.1.1,4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0,4.2.0=quay.io/strimzi/kafka"
-        kafkaConnect:
-          image:
-            name: "kafka:latest-kafka-4.1.1,4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0,4.2.0=quay.io/strimzi/kafka"
-        kafkaMirrorMaker2:
-          image:
-            name: "kafka:latest-kafka-4.1.1,4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0,4.2.0=quay.io/strimzi/kafka"
+        # kafkaConnect:
+        #   image:
+        #     name: "kafka:latest-kafka-4.1.1,4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0,4.2.0=quay.io/strimzi/kafka"
+        # kafkaMirrorMaker2:
+        #   image:
+        #     name: "kafka:latest-kafka-4.1.1,4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0,4.2.0=quay.io/strimzi/kafka"
   project: default
   syncPolicy:
     automated:
