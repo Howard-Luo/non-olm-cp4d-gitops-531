@@ -28,11 +28,15 @@ spec:
         # kafka:
         #   image:
         #     name: "kafka:latest-kafka-4.1.1,3.7.0=quay.io/strimzi/kafka:latest-kafka-3.7.0,3.8.0=quay.io/strimzi/kafka:latest-kafka-3.8.0"
-        image:
-          tag: "0.43.0"  
         kafka:
           image:
-            name: "kafka"
+            name: |
+              kafka:latest-kafka-4.1.1
+              3.7.0=quay.io/strimzi/kafka:latest-kafka-3.7.0
+              3.8.0=quay.io/strimzi/kafka:latest-kafka-3.8.0
+              4.0.0=quay.io/strimzi/kafka:latest-kafka-4.0.0
+              4.1.0=quay.io/strimzi/kafka:latest-kafka-4.1.0
+              4.1.1=quay.io/strimzi/kafka
   project: default
   syncPolicy:
     automated:
