@@ -42,4 +42,4 @@ resources:
   - watsonx-data-cluster-app.yaml
   # - watsonx-orchestrate-app.yaml
   # - watsonx-orchestrate-cluster-app.yaml
-  - instances
+  # - instances
