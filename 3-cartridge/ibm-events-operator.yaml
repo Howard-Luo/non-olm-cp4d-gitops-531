@@ -25,9 +25,14 @@ spec:
     helm:
       valuesObject:
         watchNamespaces: [gitops-operator,gitops-instance]
+        # kafka:
+        #   image:
+        #     name: "kafka:latest-kafka-4.1.1,3.7.0=quay.io/strimzi/kafka:latest-kafka-3.7.0,3.8.0=quay.io/strimzi/kafka:latest-kafka-3.8.0"
+        image:
+          tag: "0.43.0"  
         kafka:
           image:
-            name: "kafka:latest-kafka-4.1.1,3.7.0=quay.io/strimzi/kafka:latest-kafka-3.7.0,3.8.0=quay.io/strimzi/kafka:latest-kafka-3.8.0"
+            name: "kafka"
   project: default
   syncPolicy:
     automated:
