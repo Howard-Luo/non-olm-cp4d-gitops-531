@@ -40,6 +40,6 @@ resources:
   - watson-gateway-cluster-app.yaml
   - watsonx-data-app.yaml
   - watsonx-data-cluster-app.yaml
-  # - watsonx-orchestrate-app.yaml
-  # - watsonx-orchestrate-cluster-app.yaml
+  - watsonx-orchestrate-app.yaml
+  - watsonx-orchestrate-cluster-app.yaml
   - instances
